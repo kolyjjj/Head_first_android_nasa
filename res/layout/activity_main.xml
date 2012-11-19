@@ -1,34 +1,55 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-<LinearLayout 
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+	<ScrollView android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1">
+
+	<LinearLayout 
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+		
+	    <TextView android:id="@+id/image_title"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/title_string"/>
+	    
+	    <TextView android:id="@+id/image_date"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/date_string"/>
+	    
+	    <ImageView android:id="@+id/image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/test_image" 
+	        android:contentDescription="@string/image_description"/>
+	    
+	    <TextView android:id="@+id/image_description"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/description_string"/>
 	
-    <TextView android:id="@+id/image_title"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/title_string"/>
-    
-    <TextView android:id="@+id/image_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date_string"/>
-    
-    <ImageView android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/test_image" 
-        android:contentDescription="@string/image_description"/>
-    
-    <TextView android:id="@+id/image_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/description_string"/>
+	</LinearLayout>
+	</ScrollView>
+	
+	<LinearLayout android:layout_width="fill_parent"
+	    android:background="#FF8D8D8D"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"
+	    android:padding="3dp"
+	    android:gravity="center">
+
+	    <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="@string/refresh" />
+
+	</LinearLayout>
 
 </LinearLayout>
-
-</ScrollView>

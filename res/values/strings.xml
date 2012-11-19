@@ -15,5 +15,6 @@
           and low-energy X-ray emission, respectively. The field of view is about one degree across. North is 
           towards the bottom left of the image; east is to the top right.</string>
     <string name="image_description">Just an Image</string>
+    <string name="refresh">refresh</string>
 
 </resources>
