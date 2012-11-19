@@ -16,5 +16,6 @@
           towards the bottom left of the image; east is to the top right.</string>
     <string name="image_description">Just an Image</string>
     <string name="refresh">refresh</string>
+    <string name="set_wallpaper">Set Wallpaper</string>
 
 </resources>

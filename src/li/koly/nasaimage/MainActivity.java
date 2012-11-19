@@ -1,5 +1,7 @@
 package li.koly.nasaimage;
 
+import java.io.IOException;
+
 import li.koly.xmlpaser.IotdHandler;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -9,16 +11,19 @@ import android.os.Handler;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.app.WallpaperManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	IotdHandler handler = null;
 	Handler androidHandler = null;
+	protected Bitmap bitmap = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -96,5 +101,33 @@ public class MainActivity extends Activity {
 			}
 		};
 		th.start();
+	}
+	
+	public void onSetWallpaper(View view){
+		bitmap = handler.getImage();
+		Thread th = new Thread(){
+
+			@Override
+			public void run() {
+				WallpaperManager manager = WallpaperManager.getInstance(MainActivity.this);
+				try {
+					manager.setBitmap(bitmap);
+					androidHandler.post(new Runnable(){
+
+						@Override
+						public void run() {
+							// TODO Auto-generated method stub
+							Toast.makeText(MainActivity.this, "Wallpaper set", Toast.LENGTH_SHORT).show();					
+						}
+						
+					});
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		};
+		th.start();
+		
 	}
 }
