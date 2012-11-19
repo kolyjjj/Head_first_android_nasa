@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NasaImage</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_string">An Exploded Star\'s Remains and Its Murky Environment</string>
+    <string name="date_string">Thu, 15 Nov 2012 00:00:00 EST</string>
+    <string name="description_string">Supernova remnant W44 is the focus of this new image 
+        created by combining data from the European Space Agency\'s Herschel and XMM-Newton space observatories.    
+        W44 is the vast purple sphere that dominates the left hand side of this image, and measures about 100 light-years
+         across. XMM-Newton data reveal that the remnant is filled with X-ray emission from extremely hot gas.Herschel\'s 
+         three-colour infrared view comprises PACS 70 and 160 micron and SPIRE 250 micron images. X-ray data from 
+         XMM-Newton\'s EPIC instrument for W44 only has been added in light and dark blue to represent 
+          and low-energy X-ray emission, respectively. The field of view is about one degree across. North is 
+          towards the bottom left of the image; east is to the top right.</string>
+    <string name="image_description">Just an Image</string>
+
+</resources>
